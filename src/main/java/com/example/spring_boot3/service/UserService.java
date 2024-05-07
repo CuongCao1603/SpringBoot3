@@ -3,6 +3,8 @@ package com.example.spring_boot3.service;
 import com.example.spring_boot3.dto.request.UserCreateRequest;
 import com.example.spring_boot3.dto.request.UserUpdateRequest;
 import com.example.spring_boot3.entity.User;
+import com.example.spring_boot3.exception.AppException;
+import com.example.spring_boot3.exception.ErrorCode;
 import com.example.spring_boot3.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +20,7 @@ public class UserService {
         User user = new User();
 
         if (userRepository.existsByUsername(request.getUsername())) {
-            throw new RuntimeException("Username already exists");
+            throw new AppException(ErrorCode.USER_ALREADY_EXISTS);
         }
 
         user.setUsername(request.getUsername());
