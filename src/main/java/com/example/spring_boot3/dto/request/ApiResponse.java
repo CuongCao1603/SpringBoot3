@@ -1,14 +1,18 @@
 package com.example.spring_boot3.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
-@Getter
-@Setter
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@FieldDefaults(level = lombok.AccessLevel.PRIVATE)
 public class ApiResponse<T> {
-    private int code =1000;
-    private String message;
-    private T result;
+    int code = 1000;
+    String message;
+    T result;
 }

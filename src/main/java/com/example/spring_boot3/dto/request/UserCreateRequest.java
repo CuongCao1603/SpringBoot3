@@ -3,6 +3,7 @@ package com.example.spring_boot3.dto.request;
 import com.example.spring_boot3.exception.ErrorCode;
 import jakarta.validation.constraints.Size;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import static com.example.spring_boot3.exception.ErrorCode.USERNAME_INVALID;
 
@@ -10,7 +11,7 @@ import static com.example.spring_boot3.exception.ErrorCode.USERNAME_INVALID;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-//@FeildDefaults(level = AccessLevel.PRIVATE)
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class UserCreateRequest {
     @Size(min = 5, message = "USERNAME_INVALID") // Error: Cannot resolve symbol 'getMessage' (Alt+Enter shows Create method 'getMessage' in class com.example
     private String username;
