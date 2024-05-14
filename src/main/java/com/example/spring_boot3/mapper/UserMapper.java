@@ -2,7 +2,8 @@ package com.example.spring_boot3.mapper;
 
 import com.example.spring_boot3.dto.request.UserCreateRequest;
 import com.example.spring_boot3.dto.request.UserUpdateRequest;
-import com.example.spring_boot3.dto.request.response.UserResponse;
+
+import com.example.spring_boot3.dto.response.UserResponse;
 import com.example.spring_boot3.entity.User;
 
 import org.mapstruct.Mapper;

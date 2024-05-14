@@ -1,16 +1,15 @@
 package com.example.spring_boot3.controller;
 
-import com.example.spring_boot3.dto.request.ApiResponse;
+import com.example.spring_boot3.dto.response.ApiResponse;
 import com.example.spring_boot3.dto.request.UserCreateRequest;
 import com.example.spring_boot3.dto.request.UserUpdateRequest;
-import com.example.spring_boot3.dto.request.response.UserResponse;
+import com.example.spring_boot3.dto.response.UserResponse;
 import com.example.spring_boot3.entity.User;
 import com.example.spring_boot3.service.UserService;
 import jakarta.validation.Valid;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

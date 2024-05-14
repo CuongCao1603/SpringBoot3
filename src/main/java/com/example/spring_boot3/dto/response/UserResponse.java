@@ -1,4 +1,4 @@
-package com.example.spring_boot3.dto.request.response;
+package com.example.spring_boot3.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

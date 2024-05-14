@@ -1,4 +1,4 @@
-package com.example.spring_boot3.dto.request;
+package com.example.spring_boot3.dto.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
